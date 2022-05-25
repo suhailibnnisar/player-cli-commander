@@ -4,7 +4,32 @@ const { players } = require('../data/players');
 
 class Player {
   async add() {
-    console.log('Adding player');
+    console.log(`Total Player: ${players.length}`);
+
+    players.forEach((player, index) => console.log(index, player));
+
+    const { name, game } = await iq.prompt([
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Enter player name: '.cyan,
+      },
+      {
+        type: 'list',
+        name: 'game',
+        message: 'Select Game: '.cyan,
+        choices: ['Soccer', 'Basketball'],
+      },
+    ]);
+
+    console.log('--------------------');
+
+    players.push({
+      name,
+      game,
+    });
+
+    players.forEach((player, index) => console.log(index, player));
   }
   async remove() {
     console.log(`Total Player: ${players.length}`);
