@@ -1,0 +1,15 @@
+{
+  "name": "player",
+  "version": "1.0.0",
+  "description": "Basic Commander CLI Application",
+  "main": "index.js",
+  "author": "Suhail Ibn Nisar <suhailibnnisar@gmail.com>",
+  "license": "MIT",
+  "bin": "./bin/player.js",
+  "dependencies": {
+    "commander": "^9.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.35"
+  }
+}
